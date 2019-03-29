@@ -1,0 +1,84 @@
+\documentclass[opre]{informs3}
+\DoubleSpacedXI
+
+\usepackage{endnotes}
+\let\footnote=\endnote
+\let\enotesize=\normalsize
+\def\notesname{Endnotes}%
+\def\makeenmark{\hbox to1.275em{\theenmark.\enskip\hss}}
+\def\enoteformat{\rightskip0pt\leftskip0pt\parindent=1.275em
+  \leavevmode\llap{\makeenmark}}
+
+\usepackage{natbib}
+\bibpunct[, ]{(}{)}{,}{a}{}{,}%
+\def\bibfont{\small}%
+\def\bibsep{\smallskipamount}%
+\def\bibhang{24pt}%
+\def\newblock{\ }%
+\def\BIBand{and}%
+
+\TheoremsNumberedThrough
+\ECRepeatTheorems
+\EquationsNumberedThrough
+
+    \usepackage[utf8]{inputenc}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{graphicx}
+    \usepackage{amsfonts}
+    \usepackage{algorithm, float}
+    \usepackage{algorithmic}
+    \usepackage{enumerate}
+    \usepackage[bookmarks=true]{hyperref}
+    \usepackage{mathrsfs}
+    \usepackage{mathtools}
+    
+    \mathtoolsset{showonlyrefs}
+
+    \ARTICLEAUTHORS{%
+    \AUTHOR{DAI, Zhiwen}
+    \AFF{SEEM, CUHK}
+        \EMAIL{\href{mailto:1155115927@link.cuhk.edu.hk}{1155115927@link.cuhk.edu.hk}}
+    }
+    \TITLE{\textbf{Kolmogorov Forward Equation and its Application In Proving Dupire’s Formula}}
+    \RUNAUTHOR{DAI, Zhiwen}
+    \RUNTITLE{Kolmogorov Forward Equation and its Application in Proving Dupire’s Formula}
+
+    \ABSTRACT{%
+    %TODO: wirite abstract
+    TODO
+    % Enter your abstract
+    }%
+    \KEYWORDS{Kolmogorov forward equation, local volatility, Dupire’s formula}
+    
+    
+    \begin{document}
+    \maketitle
+    
+    \section{Introduction}
+
+    \section{Kolmogorov Forward Equation}
+    %TODO: 明确SDE的条件
+    \subsection{Background}
+    
+
+
+    \subsection{Kolmogorov Forward Equation (KFE)}
+    \begin{theorem}[Kolmogorov Forward Equation]\label{thm:KFE} The transition probability density $p(t, y | s, x)$ defined for $s < t$ as $P_{x,s}(X_t \in dy) = p(t, y | s, x)dy$ satisfies the partial differential equation, for every fixed $x \in \mathbb{R}^n$:
+    \begin{align}
+        &\frac{\partial p(t, y | s, x)}{\partial t} = \mathcal{A}_t^*p(t, y | s, x),~(t, y) \in (s, \infty)\times\mathbb{R}^n \label{equ:KFE}\\
+        &\lim_{t\rightarrow s} p(t, y | s, x) dy = \delta(y - x) \label{equ:init_condition}
+    \end{align}    
+    where $\delta_x(\cdot)$ is the Dirac delta function.
+    
+    \end{theorem}
+    \proof{Proof.}
+        TODO
+    \endproof
+
+    \subsection{Notes on KFE}
+    
+    \section{Dupire’s Formula: An Application of KFE}
+    \subsection{Introduction to Local Volatility}
+    \subsection{Dupire's Formula}
+    \end{document}
